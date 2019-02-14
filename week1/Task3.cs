@@ -14,11 +14,19 @@ namespace ConsoleApp5
             string s = Console.ReadLine();
             string[] a = s.Split(); // поделил строки через пробел и залил в массив
 
-            Console.WriteLine();
-            for (int i = 0; i < x; i++)
+            string[] b = new string[x * 2];
+            //0 1 2
+            //1 2 3
+            //1 1   2 2   3 3
+            //0 1   2 3   4 5
+            for(int i=0; i<x; i++)
             {
-                Console.Write(a[i] + " " + a[i] + " "); // вывел элемент дважды
+                b[i * 2] = a[i];
+                b[i * 2 + 1] = a[i];
             }
-        }
+            for (int i = 0; i < x*2; i++)
+            {
+                Console.Write(b[i]);
+            }
     }
 }
