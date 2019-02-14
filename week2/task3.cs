@@ -31,7 +31,7 @@ namespace ConsoleApp7
         }
         static void Main(string[] args)
         {
-            DirectoryInfo d = new DirectoryInfo("/Users/User/Desktop/Damn/C++"); // путь к папке 1
+            DirectoryInfo d = new DirectoryInfo(@"C:\Users\Mukhtar\Desktop\PP2\PP2"); // путь к папке 1
 
             Folders(d, 0); // вызываем функцию..рекурсию
         }
