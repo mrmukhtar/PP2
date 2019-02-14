@@ -9,7 +9,7 @@ namespace ConsoleApp6
 {
     class Program
     {
-        public static void Primee() // создаем функция Primee
+        static void Main(string[] args)
         {
             StreamReader sr = new StreamReader("input.txt"); // считываем с input.txt 
             string s = sr.ReadToEnd(); // и все записываем как строку s
@@ -33,10 +33,6 @@ namespace ConsoleApp6
                 }
             }
             sw.Close();//закрываем
-        }
-        static void Main(string[] args)
-        {
-            Primee(); //вызываем функцию
         }
     }
 }
