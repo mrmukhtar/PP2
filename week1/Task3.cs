@@ -26,7 +26,7 @@ namespace ConsoleApp5
             }
             for (int i = 0; i < x*2; i++)
             {
-                Console.Write(b[i]);
+                Console.Write(b[i] + " ");
             }
     }
 }
