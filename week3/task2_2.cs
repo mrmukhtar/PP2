@@ -11,9 +11,9 @@ namespace Lab3_2_2
     {
         static void Main(string[] args)
         {
-            File.Delete(@"C:\Users\User\Desktop\Damn\C#\LB\MYY.txt"); //задаем путь и удаляем выбранный файл 
+            File.Delete(@"C:\Users\Mukhtar\Desktop\new0\new"); //задаем путь и удаляем выбранный файл 
 
-            Directory.Delete(@"C:\Users\User\Desktop\Damn\C#\LB\Lab1"); // задаем путь и удаляем выбранную папку но она должна быть пуста
+            Directory.Delete(@"C:\Users\Mukhtar\Desktop\new"); // задаем путь и удаляем выбранную папку но она должна быть пуста
         }
     }
 }
