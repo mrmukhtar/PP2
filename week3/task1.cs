@@ -95,7 +95,7 @@ namespace Lab3
         static void Main(string[] args)
         {
             FarManager far = new FarManager(); //задаю класс
-            far.Start(@"C:\Users\User\Desktop\Damn\C#"); // даю путь где он должен начаться и передаю значение в функцию Start
+            far.Start(@"C:\Users\Mukhtar\Desktop\PP2"); // даю путь где он должен начаться и передаю значение в функцию Start
         }
     }
 }
