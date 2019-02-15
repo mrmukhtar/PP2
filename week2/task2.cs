@@ -3,36 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
-namespace task2
+namespace ConsoleApp6
 {
-    class Student
-    {
-        public string name;      //set name
-        public string id;        //set id
-        public int year;         //set year
-
-        public Student(string name, string id)      //method for name and id
-        {
-            this.name = name;
-            this.id = id;
-        }
-
-        public void addYear()            //method for increment year
-        {
-            year++;
-        }
-    }
-
     class Program
     {
         static void Main(string[] args)
         {
-            Student s = new Student("Aruzhan", "18BD110485");     //declare name and id
-            s.year = 1;                                           //declare year
-            s.addYear();                                          //make method increment year
-            Console.Write(s.name + " " + s.id + " " + s.year);    //print name,id,year(increment)
-            Console.ReadKey();
+            StreamReader sr = new StreamReader("input.txt"); // считываем с input.txt 
+            string s = sr.ReadToEnd(); // и все записываем как строку s
+            sr.Close(); // закрываем StreamReader
+            StreamWriter sw = new StreamWriter("output.txt"); // в конце выведим все данные на output.txt 
+            string[] ss = s.Split(); // строку s поделили и внесли это в массив
+            for (int i = 0; i < ss.Length; i++) // пробегаемся по массиву
+            {
+                int cnt = 0; // нужно что бы посчитать сколько будет делителей у каждого числа
+                int x = int.Parse(ss[i]); // переводим строку в int x
+                for (int j = 1; j <= x; j++) // с этим циклом посчитаем сколько у этого числа делителей
+                {
+                    if (x % j == 0) // если есть делитель то cnt++
+                    {
+                        cnt++;
+                    }
+                }
+                if (cnt == 2) // когда у нас 2 делителя то это число prime
+                {
+                    sw.Write(x + " "); //записываем его в output.txt
+                }
+            }
+            sw.Close();//закрываем
         }
     }
 }
