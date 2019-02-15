@@ -11,7 +11,7 @@ namespace Lab3_2_3
     {
         static void Main(string[] args)
         {
-            StreamReader sr = File.OpenText(@"C:\Users\User\Desktop\Damn\C#\MYY.txt");
+            StreamReader sr = File.OpenText(@"C:\Users\Mukhtar\Desktop\PP2\PP2\week3\asd.txt");
             string s = "";
             while ((s = sr.ReadLine()) != null)
             {
