@@ -11,7 +11,7 @@ namespace Lab3_2_4
     {
         static void Main(string[] args)
         {
-            File.Move(@"C: \Users\User\Desktop\Damn\C#\MYY.txt", @"C:\Users\User\Desktop\Damn\C#\Newnew.txt"); // переименовывать файл
+            File.Move(@"C:\Users\Mukhtar\Desktop\PP2\PP2\week3\meme.txt", @"C:\Users\Mukhtar\Desktop\PP2\PP2\week3\newnew.txt"); // переименовывать файл
         }
     }
 }
