@@ -1,40 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
-namespace Example5
+namespace ConsoleApp6
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Student s1 = new Student("Mukhtar", "18BD110959", 1);
-            s1.September();
+            StreamReader sr = new StreamReader("input.txt"); // считываем с input.txt 
+            string s = sr.ReadToEnd(); // и все записываем как строку s
+            sr.Close(); // закрываем StreamReader
+            StreamWriter sw = new StreamWriter("output.txt"); // в конце выведим все данные на output.txt 
+            string[] ss = s.Split(); // строку s поделили и внесли это в массив
+            for (int i = 0; i < ss.Length; i++) // пробегаемся по массиву
+            {
+                int cnt = 0; // нужно что бы посчитать сколько будет делителей у каждого числа
+                int x = int.Parse(ss[i]); // переводим строку в int x
+                for (int j = 1; j <= x; j++) // с этим циклом посчитаем сколько у этого числа делителей
+                {
+                    if (x % j == 0) // если есть делитель то cnt++
+                    {
+                        cnt++;
+                    }
+                }
+                if (cnt == 2) // когда у нас 2 делителя то это число prime
+                {
+                    sw.Write(x + " "); //записываем его в output.txt
+                }
+            }
+            sw.Close();//закрываем
         }
-    }
-    class Student
-    {
-        string Name { set; get; }
-        string ID { set; get; }
-        int YoS { set; get; }
-        public Student(string Name, string ID, int YoS)
-        {
-            this.Name = Name;
-            this.ID = ID;
-            this.YoS = YoS;
-        }
-        public void September()
-        {
-
-            Console.WriteLine("Student: {0}, ID: {1}, Year of study: {2}", Name, ID, YoS);
-
-
-            Console.ReadKey();
-        }
-
-
     }
 }
